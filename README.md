@@ -1,198 +1,84 @@
+# ⚡ Sushanth Musham | Full Stack Developer Portfolio
 
-# 🚀 CF Tracker – Codeforces Performance Dashboard
+![Portfolio Preview](https://img.shields.io/badge/Status-Live-success?style=for-the-badge) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-A full-stack web application that lets users track their **Codeforces performance, rating history, problem-solving analytics, and contest trends** through a clean dashboard with beautiful charts.
+> A high-performance, developer-centric portfolio website built with React, Tailwind CSS, and Framer Motion logic. Features a "Dynamic Island" navbar, bento-grid layouts, and cyberpunk aesthetics.
 
-Live Demo → **https://<your-vercel-domain>**
-Backend API → **https://<your-render-backend-url>**
+**[🌐 Live Demo](https://portfolio-website-sage-chi-89.vercel.app/)** *(Replace with your Vercel link if different)*
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-* 🔐 **Secure Authentication**
-
-  * JWT-based login
-  * Protected dashboard routes
-  * Persistent sessions
-
-* 📊 **User Performance Dashboard**
-
-  * Display Codeforces handle
-  * Current Rating
-  * Max Rating
-  * Total Unique Problems Solved
-
-* 📈 **Interactive Visual Analytics**
-
-  * Rating progression line chart
-  * Rating-wise solved bar chart
-  * Tag-wise solved distribution pie chart
-
-* ⚙️ **Smart Processing**
-
-  * Fetches live Codeforces data
-  * Removes duplicate solved problems
-  * Categorizes problems by rating & tags
-  * Caches processed stats for performance
-
-* 🎨 **Modern UI**
-
-  * Built with Tailwind CSS
-  * Fully responsive
-  * Dark / Light mode toggle
-
-* ☁️ **Production Ready**
-
-  * Backend deployed on Render
-  * Frontend deployed on Vercel
+- **Dynamic Island Navbar:** A smart navigation bar that expands and contracts on scroll.
+- **Bento Grid Layouts:** Modern, glassmorphism-style cards for displaying projects and stats.
+- **Interactive UI:**
+  - Typing effects for the hero section.
+  - Radioactive glow effects on hover.
+  - "Code Window" visualization of user profile data.
+- **Academic & Gaming HUD:** Unique "Player Profile" design to showcase IIT Bhubaneswar stats and Clash Royale achievements.
+- **Responsive Design:** Fully optimized for mobile, tablet, and desktop.
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-
-* React
-* Vite
-* Tailwind CSS
-* Recharts
-* React Router
-
-### Backend
-
-* Node.js
-* Express.js
-* MongoDB (Mongoose)
-* JWT Authentication
-* Axios
-
-### Deployment
-
-* Render (Backend)
-* Vercel (Frontend)
+| Category | Technologies |
+| :--- | :--- |
+| **Frontend** | React.js, Tailwind CSS, Lucide React (Icons) |
+| **Routing** | React Router DOM |
+| **Build Tool** | Vite |
+| **Deployment** | Vercel |
 
 ---
 
-## 🧩 Architecture Overview
+## 📸 Screenshots
 
-```
-User → Frontend (React)
-     → Backend API (Express)
-     → Codeforces API
-     → MongoDB (Cache + Users)
-```
+| Hero Section | Projects Grid |
+| :---: | :---: |
+| *(Add a screenshot of your hero section here)* | *(Add a screenshot of your projects grid here)* |
 
 ---
 
-## ⚙️ Setup & Installation
+## 💻 Installation & Setup
 
-### 1️⃣ Clone Repository
+Clone the repository and install dependencies to run it locally.
 
 ```bash
-git clone https://github.com/<your-username>/cf-tracker.git
-cd cf-tracker
-```
+# 1. Clone the repository
+git clone [https://github.com/SushanthMusham/Portfolio_Website.git](https://github.com/SushanthMusham/Portfolio_Website.git)
 
----
+# 2. Navigate into the directory
+cd Portfolio_Website
 
-### 2️⃣ Backend Setup
-
-```bash
-cd server
+# 3. Install dependencies
 npm install
-```
 
-Create `.env`
-
-```
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-```
-
-Run server
-
-```bash
-node server.js
-```
-
----
-
-### 3️⃣ Frontend Setup
-
-```bash
-cd client
-npm install
-```
-
-Create `.env`
-
-```
-VITE_API_URL=https://your-render-backend-url/api
-```
-
-Run frontend
-
-```bash
+# 4. Start the development server
 npm run dev
-```
 
----
+The application will be running at http://localhost:5173.
 
-## 🌍 Deployment
+📂 Project Structure
+src/
+├── assets/         # Images and icons
+├── components/     # Reusable UI components
+│   ├── Hero.jsx    # Landing section with typing effect
+│   ├── Navbar.jsx  # "Dynamic Island" navigation
+│   ├── About.jsx   # Stats, Education, and Gaming profile
+│   ├── Projects.jsx# Showcase of built apps with links
+│   ├── TechStack.jsx # Grid of skills (C++, Node, etc.)
+│   └── Footer.jsx  # Social links and resume download
+├── App.jsx         # Main routing logic
+└── main.jsx        # Entry point
 
-### Backend (Render)
+🤝 Contact
+Sushanth Musham
 
-1. Upload project or connect GitHub
-2. Set **Build Command** → `npm install`
-3. Set **Start Command** → `node server.js`
-4. Add environment variables
-5. Deploy 🎉
+Email: 23ee01032@iitbbs.ac.in
 
----
+LinkedIn: linkedin.com/in/sushanthmusham
 
-### Frontend (Vercel)
+GitHub: github.com/SushanthMusham
 
-1. Import repository
-2. Add Environment Variable
-
-```
-VITE_API_URL=https://your-render-backend-url/api
-```
-
-3. Deploy 🎉
-
----
-
-## 📸 Screenshots (Optional)
-
-*Add screenshots like these*
-
-```
-Dashboard View
-Rating Graph
-Problem Stats
-```
-
----
-
-## 🔮 Future Enhancements 
-
-* Contest reminders
-* Daily streak tracking
-* Compare two users
-* Leaderboard
-* Google OAuth
-* Email verification
-
----
-
-## 🙌 Credits
-
-Built by **Sushanth Musham**
-Data Powered by **Codeforces API**
-
----
-
-
+<p align="center"> Built with 💙 and ☕ by Sushanth. </p>
