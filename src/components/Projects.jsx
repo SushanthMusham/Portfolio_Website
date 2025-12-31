@@ -3,28 +3,64 @@ import { Code2, Activity, Globe, TrendingUp, ExternalLink, Github, Zap } from 'l
 const projects = [
   {
     id: 1,
-    title: 'Stock Market Trading Simulator',
+    title: 'FlashFlow - High-Concurrency Flash Sale Engine',
+    href: '#', // TODO: Add Deployment Link
+    github: '#', // TODO: Add GitHub Link
+    // Points taken verbatim from resume [cite: 18, 19, 20, 21]
+    points: [
+      "Engineered a distributed backend system capable of handling 17,000+ requests/second with <6ms latency, simulating high-concurrency flash sale traffic (Zomato/Ticketmaster scale).",
+      "Implemented Atomic Inventory Locking using Redis Lua Scripting, eliminating race conditions and ensuring zero over-selling across 89,000 concurrent requests.",
+      "Designed an asynchronous settlement pipeline with RabbitMQ and Node.js Workers to decouple ingestion from persistence, preventing database crashes under load.",
+      "Enforced ACID transactional integrity by persisting settled orders to PostgreSQL, ensuring 100% data consistency (Visa-grade reliability) even during high-traffic spikes."
+    ],
+    status: 'Live Demo',
+    // Tech Stack from resume [cite: 22]
+    tech: ['Node.js', 'Redis (Lua)', 'RabbitMQ', 'PostgreSQL', 'Docker Compose', 'Autocannon'],
+    metric: '17k+ req/sec',
+    icon: Zap,
+    // AMBER THEME
+    color: 'text-amber-400',
+    glow: 'group-hover:shadow-amber-500/20 group-hover:border-amber-500/50',
+    techGlow: 'hover:bg-amber-500/20 hover:shadow-[0_0_15px_rgba(251,191,36,0.6)] hover:border-amber-400',
+  },
+  {
+    id: 2,
+    title: 'Realtime Stock Market Trading Simulator',
     href: 'https://stock-sim-psi.vercel.app',
     github: 'https://github.com/SushanthMusham/stock-sim',
-    description: 'A real-time trading platform featuring live price streaming via Socket.io. Implements a secure Express + PostgreSQL backend with Prisma ORM for wallet management, portfolio tracking, and transaction validation.',
+    // Points taken verbatim from resume [cite: 26, 27, 28, 29]
+    points: [
+      "Built a real-time Stock Market Trading Simulator with live price streaming using Socket.io, Node.js, and React.",
+      "Designed a secure backend with Express + Prisma + PostgreSQL, implementing wallet management, buy/sell execution, portfolio tracking, and transaction validation.",
+      "Developed an interactive UI with Tailwind + Vite, featuring a real-time market dashboard, holdings panel, and execution confirmation system.",
+      "Deployed the full-stack application using Render (backend) and Vercel (frontend) ensuring seamless production stability."
+    ],
     status: 'Live Demo',
-    tech: ['React', 'Node.js', 'Socket.io', 'PostgreSQL', 'Prisma', 'Tailwind'],
-    metric: 'Live Price Streaming',
+    // Tech Stack from resume [cite: 30]
+    tech: ['React', 'Node.js', 'Socket.io', 'PostgreSQL', 'Prisma', 'Tailwind', 'Vercel', 'Render'],
+    metric: 'Live Streaming',
     icon: TrendingUp,
-    // EMERALD THEME (Finance/Money)
+    // EMERALD THEME
     color: 'text-emerald-400',
     glow: 'group-hover:shadow-emerald-500/20 group-hover:border-emerald-500/50',
     techGlow: 'hover:bg-emerald-500/20 hover:shadow-[0_0_15px_rgba(52,211,153,0.6)] hover:border-emerald-400',
   },
   {
-    id: 2,
-    title: 'Realtime Collaborative Editor',
+    id: 3,
+    title: 'Realtime Collaborative Document Editor',
     href: 'https://realtime-editor-frontend-ashen.vercel.app',
     github: 'https://github.com/SushanthMusham/realtime-editor-frontend',
-    description: 'A Google-Docs-style editor enabling multiple users to edit documents simultaneously with instant live sync. Features a scalable room-based WebSocket architecture and utilizes PostgreSQL (Neon) + Prisma ORM for fault-tolerant state persistence.',
+    // Points taken verbatim from resume [cite: 33, 34, 35, 39]
+    points: [
+      "Built and deployed a Google-Docs-style realtime collaborative text editor enabling multiple users to edit the same document simultaneously with instant live sync using Socket.io.",
+      "Developed a scalable room-based WebSocket architecture, ensuring isolated collaboration per document and near-zero latency synchronization across clients.",
+      "Integrated PostgreSQL (Neon) + Prisma ORM to persist document state, implemented fault-tolerant upsert logic, and handled edge cases like missing documents and DB conflicts.",
+      "Successfully deployed backend on Render and frontend on Vercel, resolved deployment failures and environment configuration."
+    ],
     status: 'Live Demo',
-    tech: ['React', 'Socket.io', 'Node.js', 'PostgreSQL', 'Prisma', 'NeonDB'],
-    metric: 'Near-Zero Latency',
+    // Tech Stack from resume [cite: 41]
+    tech: ['React', 'Node.js', 'Socket.io', 'PostgreSQL', 'Prisma', 'Vercel', 'Render'],
+    metric: 'Instant Sync',
     icon: Globe,
     // CYAN THEME
     color: 'text-cyan-400',
@@ -32,34 +68,26 @@ const projects = [
     techGlow: 'hover:bg-cyan-500/20 hover:shadow-[0_0_15px_rgba(34,211,238,0.6)] hover:border-cyan-400',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Codeforces Tracker',
     href: 'https://cf-tracker-theta.vercel.app/login',
     github: 'https://github.com/SushanthMusham/cf-tracker',
-    description: 'Full-stack analytics dashboard for visualizing rating history and problem statistics. Built with a Node.js/MongoDB backend that implements smart caching (6-hour expiration) to minimize external API calls and secure JWT authentication.',
+    // Points taken verbatim from resume [cite: 44, 45, 47, 48]
+    points: [
+      "Developed a full-stack Codeforces Tracker web app that allows users to log in, connect their CF handle, and view rating history, max rating, current rating, and total problems solved.",
+      "Built the backend using Node.js, Express.js, and MongoDB, implementing secure JWT authentication, protected routes, and middleware.",
+      "Implemented smart caching with MongoDB to reduce external API calls by storing computed stats with refresh capability (6-hour cache expiration).",
+      "Designed an interactive dashboard using React, Tailwind CSS, and Recharts, including rating trend lines and problem analytics."
+    ],
     status: 'Live Demo',
-    tech: ['React', 'MongoDB', 'Express.js', 'Recharts', 'JWT', 'Tailwind'],
+    // Tech Stack from resume [cite: 51]
+    tech: ['React', 'Tailwind CSS', 'Recharts', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'Render', 'Vercel'],
     metric: 'Smart Caching',
     icon: Activity,
     // PURPLE THEME
     color: 'text-fuchsia-400',
     glow: 'group-hover:shadow-fuchsia-500/20 group-hover:border-fuchsia-500/50',
     techGlow: 'hover:bg-fuchsia-500/20 hover:shadow-[0_0_15px_rgba(232,121,249,0.6)] hover:border-fuchsia-400',
-  },
-  {
-    id: 4,
-    title: 'Flash Flow',
-    href: '#', // TODO: Add your Deployment Link
-    github: '#', // TODO: Add your GitHub Link
-    description: 'A high-performance URL shortener and analytics service. Features custom alias generation, QR codes, and detailed click tracking. Optimized for speed with a robust backend architecture.',
-    status: 'Live Demo',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind'],
-    metric: 'High Throughput',
-    icon: Zap,
-    // AMBER THEME (Energy/Speed)
-    color: 'text-amber-400',
-    glow: 'group-hover:shadow-amber-500/20 group-hover:border-amber-500/50',
-    techGlow: 'hover:bg-amber-500/20 hover:shadow-[0_0_15px_rgba(251,191,36,0.6)] hover:border-amber-400',
   },
 ];
 
@@ -83,8 +111,8 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* GRID - Updated to grid-cols-2 on large screens for better balance with 4 items */}
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        {/* GRID: Reverted to grid-cols-3 as requested */}
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {projects.map((project) => (
             <article 
               key={project.id} 
@@ -105,20 +133,27 @@ export default function Projects() {
               </div>
 
               {/* CONTENT */}
-              <div>
+              <div className="flex-grow">
                 <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-slate-400 transition-all">
                   <a href={project.href} target="_blank" rel="noreferrer">
                     <span className="absolute inset-0" />
                     {project.title}
                   </a>
                 </h3>
-                <p className="mt-4 text-sm leading-6 text-gray-400 font-light">
-                  {project.description}
-                </p>
+                
+                {/* Render Bullet Points instead of single paragraph */}
+                <ul className="mt-4 space-y-2">
+                  {project.points.map((point, idx) => (
+                    <li key={idx} className="text-sm leading-6 text-gray-400 font-light flex gap-2">
+                      <span className={`mt-1.5 h-1.5 w-1.5 min-w-[6px] rounded-full ${project.color.replace('text-', 'bg-')}`}></span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               {/* TECH STACK */}
-              <div className="mt-6 flex flex-wrap gap-2 relative z-20">
+              <div className="mt-8 flex flex-wrap gap-2 relative z-20">
                 {project.tech.map((t) => (
                   <span 
                     key={t} 
@@ -130,7 +165,7 @@ export default function Projects() {
               </div>
 
               {/* ACTION FOOTER */}
-              <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
+              <div className="mt-6 pt-6 border-t border-white/5 flex items-center justify-between">
                 
                 {/* Metric Highlight */}
                 <div className="flex flex-col">
