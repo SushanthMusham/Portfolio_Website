@@ -1,4 +1,4 @@
-import { Code2, Activity, Globe, TrendingUp, ExternalLink, Github } from 'lucide-react';
+import { Code2, Activity, Globe, TrendingUp, ExternalLink, Github, Zap } from 'lucide-react';
 
 const projects = [
   {
@@ -46,6 +46,21 @@ const projects = [
     glow: 'group-hover:shadow-fuchsia-500/20 group-hover:border-fuchsia-500/50',
     techGlow: 'hover:bg-fuchsia-500/20 hover:shadow-[0_0_15px_rgba(232,121,249,0.6)] hover:border-fuchsia-400',
   },
+  {
+    id: 4,
+    title: 'Flash Flow',
+    href: '#', // TODO: Add your Deployment Link
+    github: '#', // TODO: Add your GitHub Link
+    description: 'A high-performance URL shortener and analytics service. Features custom alias generation, QR codes, and detailed click tracking. Optimized for speed with a robust backend architecture.',
+    status: 'Live Demo',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind'],
+    metric: 'High Throughput',
+    icon: Zap,
+    // AMBER THEME (Energy/Speed)
+    color: 'text-amber-400',
+    glow: 'group-hover:shadow-amber-500/20 group-hover:border-amber-500/50',
+    techGlow: 'hover:bg-amber-500/20 hover:shadow-[0_0_15px_rgba(251,191,36,0.6)] hover:border-amber-400',
+  },
 ];
 
 export default function Projects() {
@@ -68,8 +83,8 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* GRID */}
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        {/* GRID - Updated to grid-cols-2 on large screens for better balance with 4 items */}
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {projects.map((project) => (
             <article 
               key={project.id} 
@@ -142,7 +157,12 @@ export default function Projects() {
                     href={project.href} 
                     target="_blank" 
                     rel="noreferrer"
-                    className={`p-2 rounded-lg text-black transition-all shadow-lg hover:scale-105 flex items-center gap-2 font-bold text-xs ${project.color === 'text-cyan-400' ? 'bg-cyan-400 hover:bg-cyan-300' : project.color === 'text-fuchsia-400' ? 'bg-fuchsia-400 hover:bg-fuchsia-300' : 'bg-emerald-400 hover:bg-emerald-300'}`}
+                    className={`p-2 rounded-lg text-black transition-all shadow-lg hover:scale-105 flex items-center gap-2 font-bold text-xs ${
+                        project.color === 'text-cyan-400' ? 'bg-cyan-400 hover:bg-cyan-300' : 
+                        project.color === 'text-fuchsia-400' ? 'bg-fuchsia-400 hover:bg-fuchsia-300' : 
+                        project.color === 'text-amber-400' ? 'bg-amber-400 hover:bg-amber-300' :
+                        'bg-emerald-400 hover:bg-emerald-300'
+                    }`}
                     title="Open Live App"
                   >
                     <ExternalLink size={18} />
@@ -158,4 +178,3 @@ export default function Projects() {
     </div>
   )
 }
-
